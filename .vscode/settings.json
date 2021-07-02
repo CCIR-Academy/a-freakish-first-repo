@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/amazon/anaconda3/envs/pythonenv/bin/python",
+    "python.pythonPath": "/home/amazon/anaconda3/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,
     "python.linting.enabled": true
