@@ -11,10 +11,10 @@
 - [x] Run and Debug in VSCode within an environment in Anaconda
 - [x] Create your first Jupyter Notebook!
 - [x] Phase 2 Exercises
-- [] Phase 2 Additional Exercises
-- [] Handling JSON
-- [] Loading files
-- [] Database Handling
+- [ ] Phase 2 Additional Exercises
+- [ ] Handling JSON
+- [ ] Loading files
+- [ ] Database Handling
 - [x] Write a Markdown
  
 
