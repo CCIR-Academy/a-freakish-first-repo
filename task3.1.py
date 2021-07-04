@@ -6,7 +6,10 @@ try:
 except ImportError:
     import _thread as thread
 
+
+
 def get_data(script):
+    messages = []
     """
     function to get data from binance api
     """
@@ -16,16 +19,20 @@ def get_data(script):
     "id": 1
     }
     requestjson = json.dumps(requestdict)
-    print('not working')
+    
 
     def on_message(ws, message):
-        print(message)
+        messages.append(json.loads(message))
+        #print(message)
 
     def on_error(ws, error):
-        print(error)
+        pass
+        #print(error)
 
     def on_close(ws, close_status_code, close_msg):
-        print("### closed ###")
+        pass
+        #print("### closed ###")
+        
 
     def on_open(ws):
         def run(*args):
@@ -34,7 +41,7 @@ def get_data(script):
                 ws.send(requestjson)
             time.sleep(1)
             ws.close()
-            print("thread terminating...")
+            #print("thread terminating...")
         thread.start_new_thread(run, ())
 
 
@@ -48,6 +55,14 @@ def get_data(script):
 
         ws.run_forever()
 
+    
+    return messages 
+
 data = get_data('btcusdt@aggTrade')
 
-    
+print(data)
+
+
+
+
+
